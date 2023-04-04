@@ -11,38 +11,37 @@ import ErrorPage from './Page/ErrorPage';
 import About from './Page/About';
 import Contact from './Page/Contact';
 
-const  router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
    
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home />,
-      },{
-        path:'/contact',
-        element: <Contact/>
+        errorElement: <ErrorPage />,
       },
       {
-        path:'/about'
-        ,
-        element:<About/>
+        path: '/contact',
+        element: <Contact/>,
+        errorElement: <ErrorPage />,
       },
       {
-        path:'*',
-        element:<ErrorPage/>
+        path:'/about',
+        element:<About/>,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path:`*`,
+        errorElement: <ErrorPage />,
       }
     ],
   },
 ]);
+
 ReactDOM.createRoot(document.getElementById('root')).render(
- 
-
-
-
   <React.StrictMode>
-        <RouterProvider router={router} />
-
+    <RouterProvider router={router} />
   </React.StrictMode>,
-)
+);

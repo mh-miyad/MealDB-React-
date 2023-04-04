@@ -26,7 +26,7 @@ const NavbarCom = ({numberofcart}) => {
         </div>
         <Navbar.Collapse>
           <Navbar.Link>
-            <NavLink to={"/home"}> Home</NavLink>
+            <NavLink to={"/"}> Home</NavLink>
           </Navbar.Link>
           <Navbar.Link>
             <NavLink to={'/about'}>About</NavLink>
