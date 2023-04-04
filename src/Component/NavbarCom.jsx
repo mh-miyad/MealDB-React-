@@ -28,9 +28,11 @@ const NavbarCom = ({numberofcart}) => {
           <Navbar.Link>
             <NavLink to={"/home"}> Home</NavLink>
           </Navbar.Link>
-          <Navbar.Link>About</Navbar.Link>
-          <Navbar.Link>Product</Navbar.Link>
-          <Navbar.Link>Contact</Navbar.Link>
+          <Navbar.Link>
+            <NavLink to={'/about'}>About</NavLink>
+          </Navbar.Link>
+          <Navbar.Link>   <NavLink to={'/contact'}> Contact</NavLink></Navbar.Link>
+         
         </Navbar.Collapse>
       </Navbar>
     </div>
