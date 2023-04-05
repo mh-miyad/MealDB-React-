@@ -1,47 +1,41 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Home from './Page/Home';
-import ErrorPage from './Page/ErrorPage';
-import About from './Page/About';
-import Contact from './Page/Contact';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./Page/Home";
+import ErrorPage from "./Page/ErrorPage";
+import About from "./Page/About";
+import Contact from "./Page/Contact";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-   
+
     children: [
       {
         path: "/",
         element: <Home />,
-        errorElement: <ErrorPage />,
       },
       {
-        path: '/contact',
-        element: <Contact/>,
-        errorElement: <ErrorPage />,
+        path: "/contact",
+        element: <Contact />,
       },
       {
-        path:'/about',
-        element:<About/>,
-        errorElement: <ErrorPage />,
+        path: "/about",
+        element: <About />,
       },
       {
-        path:`*`,
-        errorElement: <ErrorPage />,
-      }
+        path: `*`,
+        element: <ErrorPage />,
+      },
     ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

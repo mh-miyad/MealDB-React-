@@ -1,5 +1,5 @@
- const loadData =  async()=>{
+const loadData = async () => {};
 
+const getData = () => {};
 
-
- }
+const setData = () => {};
