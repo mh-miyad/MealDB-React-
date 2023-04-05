@@ -7,35 +7,30 @@ import Home from "./Page/Home";
 import ErrorPage from "./Page/ErrorPage";
 import About from "./Page/About";
 import Contact from "./Page/Contact";
-
-const router = createBrowserRouter([
+const  router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
-   
-    children: [
+    path:'/',
+    element:<App/>,
+    children:[
       {
-        path: "/",
-        element: <Home />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: '/contact',
-        element: <Contact/>,
-        errorElement: <ErrorPage />,
+          path:'/',
+          element:<Home/>
       },
       {
         path:'/about',
-        element:<About/>,
-        errorElement: <ErrorPage />,
+        element:<About/>
+      },{
+        path:'/contact',
+        element:<Contact/>
       },
       {
-        path:`*`,
-        errorElement: <ErrorPage />,
+        path:'*',
+        element:<ErrorPage/>
       }
-    ],
-  },
-]);
+    ]
+  }
+])
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
