@@ -13,7 +13,7 @@ const ErrorPage = () => {
           <div className="text-3xl text-gray-500 font-bold py-5 px-10">No Page Found</div>
          </div>
 
-          <button className=" text-xl text-purple-700 font-bold font-sans  ">  Go to <Link className="bg-gray-500 p-4 rounded-xl text-white" to={'/home'}>Home</Link> </button>
+          <button className=" text-xl text-purple-700 font-bold font-sans  ">  Go to <Link className="bg-gray-500 p-4 rounded-xl text-white" to={'/'}>Home</Link> </button>
         </div>
       </div>
     </div>
